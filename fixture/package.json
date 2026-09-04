@@ -1,0 +1,26 @@
+{
+    "name": "fixture",
+    "version": "1.0.0",
+    "description": "Minimal Ghost theme fixture for EktoKit integration tests.",
+    "author": {
+        "name": "John Doe",
+        "email": "john@example.com"
+    },
+    "engines": {
+        "ghost": ">=6.0.0"
+    },
+    "config": {
+        "posts_per_page": 6
+    },
+    "scripts": {
+        "dev": "ektokit dev",
+        "build": "ektokit build",
+        "zip": "ektokit zip",
+        "dev:host": "ektokit dev --host"
+    },
+    "devDependencies": {
+        "@tailwindcss/postcss": "^4.3.3",
+        "@w3ify/ektokit": "file:..",
+        "tailwindcss": "^4.3.3"
+    }
+}

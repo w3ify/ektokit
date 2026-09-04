@@ -1,0 +1,23 @@
+# Dependencies and lockfiles
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lock
+bun.lockb
+
+# Generated files
+dist/
+fixture/assets/built/
+*.tgz
+.temp/
+
+# Local configuration
+.env
+.env.*
+.npmrc
+
+# System files
+.DS_Store
+desktop.ini
+Thumbs.db

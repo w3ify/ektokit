@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import "./theme.css";
+@import "./lib/vendor/reset.css";
+
+.site-content > * + * {
+    margin-top: 1rem;
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* Required by Ghost for editor content (gscan). */
+.kg-width-wide {
+    width: 100%;
+}
+
+.kg-width-full {
+    width: 100vw;
+}

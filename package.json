@@ -1,0 +1,54 @@
+{
+    "name": "@w3ify/ektokit",
+    "version": "1.0.0",
+    "description": "Development tool for Ghost themes with CSS and JavaScript builds, live reload, and ZIP packaging.",
+    "type": "module",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/w3ify/ektokit.git"
+    },
+    "bugs": {
+        "url": "https://github.com/w3ify/ektokit/issues"
+    },
+    "homepage": "https://github.com/w3ify/ektokit#readme",
+    "bin": {
+        "ektokit": "bin/ektokit.js"
+    },
+    "exports": {
+        ".": {
+            "types": "./types/index.d.ts",
+            "default": "./src/index.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "files": [
+        "bin",
+        "src",
+        "types",
+        "README.md",
+        "LICENSE"
+    ],
+    "engines": {
+        "node": ">=22"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "test": "node --test \"test/**/*.test.js\""
+    },
+    "dependencies": {
+        "chokidar": "^4.0.3",
+        "lightningcss": "^1.33.0",
+        "picomatch": "^4.0.3",
+        "postcss": "^8.5.6",
+        "postcss-import": "^17.0.0",
+        "terser": "^5.44.0",
+        "yazl": "^3.3.1"
+    },
+    "devDependencies": {
+        "fflate": "^0.8.3",
+        "typescript": "^5.9.3"
+    }
+}

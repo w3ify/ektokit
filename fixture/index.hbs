@@ -1,0 +1,21 @@
+{{!< default}}
+
+<main class="site-main mx-auto max-w-4xl px-4 py-8 sm:px-8">
+    <h1 class="text-2xl font-bold">{{@site.title}}</h1>
+
+    {{#if @site.description}}
+        <p class="mt-3 text-zinc-600">{{@site.description}}</p>
+    {{/if}}
+
+    <div class="mt-6 grid gap-4 sm:grid-cols-2">
+        {{#foreach posts}}
+            {{> "cards/media/inner"}}
+        {{else}}
+            <p class="text-zinc-600">No posts yet.</p>
+        {{/foreach}}
+    </div>
+
+    <div class="mt-6 text-sm">
+        {{pagination}}
+    </div>
+</main>

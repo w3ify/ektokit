@@ -1,0 +1,9 @@
+{{#if @site.members_enabled}}
+    <button
+        type="button"
+        data-portal="{{#if @member}}account{{else}}signup{{/if}}"
+        class="shrink-0 cursor-pointer rounded-lg bg-zinc-900 px-4 py-2 text-sm font-semibold text-white hover:bg-zinc-700 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-900"
+    >
+        {{#if @member}}Account{{else}}Sign up{{/if}}
+    </button>
+{{/if}}

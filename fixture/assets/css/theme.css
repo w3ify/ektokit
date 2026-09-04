@@ -1,0 +1,3 @@
+@theme {
+    --color-accent: var(--ghost-accent-color, var(--color-violet-700));
+}
