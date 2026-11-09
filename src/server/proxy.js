@@ -107,7 +107,7 @@ main { width: min(100%, calc(var(--spacing) * 160)); }
     align-items: center;
     justify-content: space-between;
     gap: calc(var(--spacing) * 4);
-    padding: calc(var(--spacing) * 3) calc(var(--spacing) * 5);
+    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 6);
     border-bottom: 1px solid var(--line);
 }
 
@@ -141,7 +141,7 @@ main { width: min(100%, calc(var(--spacing) * 160)); }
 }
 
 .content {
-    --content-padding: calc(var(--spacing) * 5);
+    --content-padding: calc(var(--spacing) * 6);
     padding: var(--content-padding);
 }
 
@@ -249,7 +249,10 @@ code {
 /* Viewport breakpoints stay independent of the component's spacing unit. */
 @media (min-width: 40rem) {
     body { padding: calc(var(--spacing) * 8); }
-    .content { --content-padding: calc(var(--spacing) * 8); }
+    .content {
+        --content-padding: calc(var(--spacing) * 8);
+        padding-inline: calc(var(--spacing) * 6);
+    }
     h1 {
         font-size: var(--text-3xl);
         line-height: var(--text-3xl--line-height);

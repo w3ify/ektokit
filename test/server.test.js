@@ -476,11 +476,17 @@ test("reports an unreachable Ghost instead of crashing", async (t) => {
             "every font size uses the standard type scale, including the responsive heading");
     }
     assert.match(body, /\.status-code\s*\{\s*margin: 0;/);
+    assert.match(body, /\.panel-header\s*\{[^}]*padding: calc\(var\(--spacing\) \* 4\) calc\(var\(--spacing\) \* 6\);/,
+        "the panel header uses the roomier block padding and shared inline alignment");
+    assert.match(body, /\.content\s*\{\s*--content-padding: calc\(var\(--spacing\) \* 6\);\s*padding: var\(--content-padding\);\s*\}/,
+        "mobile content keeps the same padding on every side");
     assert.match(body, /\.lead\s*\{[^}]*margin: 0;\s*margin-top: calc\(var\(--spacing\) \* 3\);/);
     assert.match(body, /\.target, \.retry\s*\{ margin-top: calc\(var\(--spacing\) \* 5\); \}/,
         "the address and retry boxes share the same top spacing");
     assert.match(body, /--spacing: 0\.25rem;/);
-    for (const [, spacing] of body.matchAll(/(?:margin(?:-top)?|padding(?:-left)?|gap|inset):\s*([^;]+);/g)) {
+    assert.match(body, /@media \(min-width: 40rem\)\s*\{[^}]*body \{[^}]*\}\s*\.content \{[^}]*padding-inline: calc\(var\(--spacing\) \* 6\);/,
+        "desktop content aligns with the panel header while keeping its larger vertical spacing");
+    for (const [, spacing] of body.matchAll(/(?:margin(?:-top)?|padding(?:-left|-inline)?|gap|inset):\s*([^;]+);/g)) {
         const remainder = spacing.replace(/calc\(var\(--spacing\) \* -?\d+(?:\.5)?\)|var\(--content-padding\)|\b0\b/g, "").trim();
         assert.equal(remainder, "", "spacing uses the shared quarter-rem unit");
     }

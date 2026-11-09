@@ -1,6 +1,6 @@
 {
     "name": "@w3ify/ektokit",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Development tool for Ghost themes with CSS and JavaScript builds, live reload, and ZIP packaging.",
     "type": "module",
     "license": "MIT",
