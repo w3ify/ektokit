@@ -1,6 +1,6 @@
 {
     "name": "@w3ify/ektokit",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Development tool for Ghost themes with CSS and JavaScript builds, live reload, and ZIP packaging.",
     "type": "module",
     "license": "MIT",
@@ -11,7 +11,7 @@
     "bugs": {
         "url": "https://github.com/w3ify/ektokit/issues"
     },
-    "homepage": "https://github.com/w3ify/ektokit#readme",
+    "homepage": "https://ektokit.org",
     "bin": {
         "ektokit": "bin/ektokit.js"
     },
